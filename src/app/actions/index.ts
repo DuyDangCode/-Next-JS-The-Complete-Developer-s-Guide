@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 import { db } from "../db";
 import { asyncHandle } from "../utils";
+import { revalidatePath } from "next/cache";
 
 
 const createAction =  async(formState: {message: string}, formData: FormData) => {
@@ -18,6 +19,7 @@ const createAction =  async(formState: {message: string}, formData: FormData) =>
         code,
     }})
     console.log(newSnipet);
+    revalidatePath('/');
     redirect('/');
 }
 
