@@ -14,7 +14,7 @@ export default function Hello({ children }: { children: ReactNode }) {
       >
         Say bye
       </button>
-      <HelloFormServer />
+      {/* <HelloFormServer /> */}
       {children}
     </div>
   );

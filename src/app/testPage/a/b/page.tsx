@@ -1,7 +1,7 @@
 import Hello from '@/app/components/clientComponent';
 import HelloFormServer from '@/app/components/serverComponent';
 
-export default function B() {
+export default async function B() {
   console.log('b');
   async function a() {
     'use server';
